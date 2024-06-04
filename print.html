@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+<div class="container">
+        <div class="logo"><img src="image/leynes.jpg"></div>
+        <div class="text"><h1>Leynes Computer <br>Center</h1></div>
+
+        <div class="nav-panel">
+            <div class="panel">
+                <a href="Home.html" class="nav-item">Home</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="terms.html" class="nav-item">Terms and Policies</a>
+            </div>
+    <div class="printForm">
+        <form id="print-form" action="process_print_form.php" method="POST" enctype="multipart/form-data">
+            <h1>Print Booking Details</h1>
+            <div class="detail">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="detail">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="detail">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="detail">
+                <label for="document-type">Document Type:</label>
+                <input type="text" id="document-type" name="document-type" required>
+            </div>
+            <div class="detail">
+                <label for="pages">Number of Pages:</label>
+                <input type="number" id="pages" name="pages" required>
+            </div>
+            <div class="detail">
+                <label for="appointment-date">Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+            </div>
+            <div class="detail">
+                <label for="appointment-time">Appointment Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+            </div>
+            <div class="detail">
+                <label for="file-upload">Upload Document:</label>
+                <input type="file" id="file-upload" name="file-upload" required>
+            </div>
+            <div class="detail">
+                <label for="additional-notes">Additional Notes:</label>
+                <textarea id="additional-notes" name="additional-notes"></textarea>
+            </div>
+            <div class="submit">
+                <button class="sbn" type="submit" onclick="showNotification()">Book Printing</button>
+            </div>
+            
+        </form>
+
+        <div>
+            <div class="home-btn1">
+                <a href="services.html" rel="print"><button class="btn">Go Back</button></a>
+            </div>
+
+        </div>
+    </div>  
+</div>
+
+        <script>
+             function showNotification() {
+            alert("Your Print booking has been submitted successfully!");
+            }
+        </script>
+
+</body>
+</html>

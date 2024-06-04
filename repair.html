@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Repair</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="image/leynes.jpg"></div>
+        <div class="text"><h1>Leynes Computer <br>Center</h1></div>
+
+        <div class="nav-panel">
+            <div class="panel">
+                <a href="Home.html" class="nav-item">Home</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="terms.html" class="nav-item">Terms and Policies</a>
+            </div>
+        <div class="repairForm">
+            <form id="repair-form">
+                <h1>Repair Booking Details</h1>
+                <div class="detail">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="detail">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="detail">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="detail">
+                    <label for="device">Device:</label>
+                    <select id="device" name="device" required>
+                        <option value="">Select a device</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Tablet">Tablet</option>
+                        <option value="Smartphone">Smartphone</option>
+                        <option value="Printer">Printer</option>
+                    </select>
+                </div>
+                <div class="detail">
+                    <label for="issue">Issue:</label>
+                    <textarea id="issue" name="issue" required></textarea>
+                </div>
+                <div class="detail">
+                    <label for="appointment-date">Appointment Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+                <div class="detail">
+                    <label for="appointment-time">Appointment Time:</label>
+                    <input type="time" id="appointment-time" name="appointment-time" required>
+                </div>
+                <div class="detail">
+                    <label for="additional-notes">Additional Notes:</label>
+                    <textarea id="additional-notes" name="additional-notes"></textarea>
+                </div>
+
+                <div class="submit">
+                    <button class="sbn" type="submit" onclick="showNotification()">Book Repair</button>
+                </div>
+
+                <form id="repair-form" action="process_form.php" method="POST"></form>
+            <div class="home-btn1">
+                <a href="services.html" rel="repair"><button class="btn">Go Back</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showNotification() {
+            alert("Your Repair booking has been submitted successfully!");
+        }
+    </script>
+</body>
+</html>

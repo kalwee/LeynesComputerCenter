@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100dvh;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/*login*/
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: skyblue;
+  max-height: 500px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 7px 7px 10px 3px #24004628;
+  }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+}
+  
+  /*checkbox to switch from sign up to login*/
+  #chk {
+  display: none;
+  }
+  
+  /*Login*/
+.login {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .login label {
+    margin: 25% 0 5%;
+  }
+  
+  label {
+    color: #fff;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    background: #e0dede;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+  
+  /*Register*/
+  .register {
+    background: #eee;
+    border-radius: 100% / 10%;
+    transform: translateY(5%);
+    transition: .8s ease-in-out;
+  }
+  
+  .register label {
+    color: #1e9ef3;
+    transform: scale(.6);
+  }
+  
+  #chk:checked ~ .register {
+    transform: translateY(-60%);
+  }
+  
+  #chk:checked ~ .register label {
+    transform: scale(1);
+    margin: 10% 0 5%;
+  }
+  
+  #chk:checked ~ .login label {
+    transform: scale(.6);
+    margin: 5% 0 5%;
+  }   
+  /*Button*/
+  .form button a{
+    color: #fff;
+  }
+  .form button {
+    width: 100%;
+    height: 40px;
+    margin: 12px auto 10%;
+    color: #fff;
+    background: rgb(45, 175, 227);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s ease-in;
+  }
+  
+  .form button:hover {
+    background-color: rgb(8, 85, 115);
+  }
+
+/* end of login */
+
+/* logo */
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+.container .logo{
+  width: 100%;
+  aspect-ratio: 20/5;
+  object-fit: cover;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+/* end of logo */
+
+/* text */
+.text {
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  width: 100%;
+  left: 1rem;
+  margin-top: 30px;
+  text-align: center;
+}
+.container .text h1{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  margin-top: 10px;
+  font-family: Impact;
+  font-size: 45px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* end of text */
+/* nav-panel */
+.nav-panel{
+  display: inline-block;
+}
+.panel{
+  display: flex;
+  height: max-content;
+  width: fit-content;
+  background-color: transparent;
+  text-align: center;
+  gap: 3rem;
+  padding: 5px;
+}
+.panel a{
+  background-color: transparent;
+  width: fit-content;
+  height: auto;
+}
+.panel .nav-item {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black; /* Dark grey text color */
+  transition: background-color 0.2s ease-in, color 0.2s ease-in; /* Transition for both background-color and color */
+}
+.container .nav-panel .panel .nav-item:hover{
+  background-color: #1e9ef3; /* Light blue background color on hover */
+  color: #fff; /* White text color on hover */
+}
+/* end of nav-panel */  
+/* home */
+.indented p{
+  text-indent: 2rem;
+  text-align: left;
+padding: 2rem;
+}
+/* end of home */
+/* services */
+.btn-group{
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}
+.btn-group .btn{
+  height: 50px;
+  width: 150px;
+  padding: 10px;
+  font-size: large;
+  background-color: rgb(71, 161, 197);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in; /* Transition for both background-color and color */
+}
+.btn-group .btn:hover{
+  background-color:rgb(41, 79, 94) ;
+  color: white;
+}
+/* end of services */
+/* print */
+#print-form, #repair-form, #upgrade-form{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(59, 154, 154);
+  width: 100%;
+  height: 100%;
+}
+.submit{
+  width: 100%;
+  height: 100%;
+
+}
+.home-btn1{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(59, 154, 154);
+  padding: 0 1rem 1rem 1rem;
+
+}
+
+.submit .sbn, .home-btn1 .btn{
+  width: 100px;
+  height: 30px;
+  background-color: rgb(132, 173, 189);
+  
+}
+.detail{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.detail label{
+  font-size: 15px;
+}
+
+/* ------------- Terms ----------------- */
+.terms{
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  padding: 2rem;
+}
+.home-btn{
+  margin-top: 3rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem 1rem 1rem;
+
+}
+/* ------------- About ----------------- */
+.contact-info{
+  display: flex;
+  align-items: center ;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.contact-info .social-media-link{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 168px;
+  gap: 1rem;
+}
+.contact-info .phone-info{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  gap: 1rem;
+}
+.contact-info .social-media-link a img, .contact-info .phone-info img{
+  height: 30px;
+  width: auto;
+
+}
+
+/* ----------------------responsive --------------------------- */
+@media (max-width:900px) {
+  .container .logo .text h1{
+  font-size: 30px;
+  padding-top: 50px;
+  }
+}
+@media (max-width:700px) {
+  .container .logo .text h1{
+  font-size: 30px;
+  padding-top: 30px;
+  }
+}
+@media (max-width:580px) {
+  .container .logo .text h1{
+  font-size: 30px;
+  }
+}
+@media (max-width:480px) {
+  .main{
+      width: 200px;
+  }
+  input::placeholder{
+      font-size: 10px;
+  }  
+}
+
+
